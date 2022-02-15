@@ -1,0 +1,55 @@
+<div class="dashboard-nav">
+
+  <div class="nav-header">
+    <a routerLink="./users">
+      <img
+        src="https://softr-assets-eu-shared.s3.eu-central-1.amazonaws.com/studio/blocks/assets/softr_logo_icon_only.svg">
+    </a>
+  </div>
+  <div class="nav-body">
+    <div class="menu-items">
+      <div class="menu-item" routerLink="./users" routerLinkActive="active">
+        <i class="far fa-user"></i>
+        <span>
+            Users
+          </span>
+      </div>
+      <div class="menu-item" routerLink="./posts" routerLinkActive="active">
+        <i class="far fa-envelope"></i>
+        <span>
+            Posts
+          </span>
+      </div>
+
+      <div class="menu-item" routerLink="./comments" routerLinkActive="active">
+        <i class="far fa-comment"></i>
+        <span>
+            Comments
+          </span>
+      </div>
+
+      <a routerLink="./todos">
+        <div class="menu-item" routerLinkActive="active">
+          <i class="far fa-list-alt"></i>
+          <span>
+            ToDos
+          </span>
+        </div>
+      </a>
+
+      <div class="menu-item" style="float: bottom" routerLink="/auth/signin" (click)="onLogout()"
+           routerLinkActive="active">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>
+            LogOut
+          </span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<router-outlet></router-outlet>
+

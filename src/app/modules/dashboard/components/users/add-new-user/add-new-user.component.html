@@ -1,0 +1,202 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit(addForm)" class="form">
+  <div class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Name" id='name' formControlName="name"/>
+      <label for="name" class="form__label">Name</label>
+    </div>
+    <div class="error"
+         *ngIf="!addForm.get('name').value && addForm.get('name').touched">
+      Please Provide Name.
+    </div>
+
+  </div>
+
+  <div class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Username"  formControlName="username"/>
+      <label for="name" class="form__label">Username</label>
+    </div>
+    <div class="error"
+         *ngIf="!addForm.get('username').value && addForm.get('username').touched">
+      Please Provide Username.
+    </div>
+
+  </div>
+
+  <div class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Email"  formControlName="email"/>
+      <label for="name" class="form__label">Email</label>
+    </div>
+    <div class="error"
+         *ngIf="addForm.get('email').invalid && addForm.get('email').value">
+      Please Provide Valid Email.
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('email').value && addForm.get('email').touched">
+      Please Provide Email.
+    </div>
+
+  </div>
+
+  <div formGroupName="address" class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Street"  formControlName="street"/>
+      <label for="name" class="form__label">Street</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('address.street').value && addForm.get('address.street').touched">
+      Please Provide Street.
+    </div>
+
+  </div>
+
+  <div formGroupName="address" class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Suite"  formControlName="suite"/>
+      <label for="name" class="form__label">Suite</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('address.suite').value && addForm.get('address.suite').touched">
+      Please Provide Suite.
+    </div>
+
+  </div>
+
+  <div formGroupName="address" class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="City"  formControlName="city"/>
+      <label for="name" class="form__label">City</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('address.city').value && addForm.get('address.city').touched">
+      Please Provide City.
+    </div>
+
+  </div>
+
+  <div formGroupName="address" class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Zipcode"  formControlName="zipcode"/>
+      <label for="name" class="form__label">Zipcode</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('address.zipcode').value && addForm.get('address.zipcode').touched">
+      Please Provide Zipcode.
+    </div>
+
+  </div>
+
+  <div formGroupName="address" style="width: 100%">
+
+    <div formGroupName="geo" class="input-container">
+      <div class="form__group field">
+        <input  class="form__field" placeholder="Latitude"  formControlName="lat"/>
+        <label for="name" class="form__label">Latitude</label>
+      </div>
+
+      <div class="error"
+           *ngIf="!addForm.get('address.geo.lat').value && addForm.get('address.geo.lat').touched">
+        Please Provide Latitude.
+      </div>
+
+    </div>
+
+    <div formGroupName="geo" class="input-container">
+
+      <div class="form__group field">
+        <input  class="form__field" placeholder="Longitude"  formControlName="lng"/>
+        <label for="name" class="form__label">Longitude</label>
+      </div>
+
+      <div class="error"
+           *ngIf="!addForm.get('address.geo.lng').value && addForm.get('address.geo.lng').touched">
+        Please Provide Longitude.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="input-container">
+
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Phone"  formControlName="phone"/>
+      <label for="name" class="form__label">Phone</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('phone').value && addForm.get('phone').touched">
+      Please Provide Phone.
+    </div>
+
+  </div>
+
+  <div class="input-container">
+
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Website"  formControlName="website"/>
+      <label for="name" class="form__label">Website</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('website').value && addForm.get('website').touched">
+      Please Provide Website.
+    </div>
+
+  </div>
+
+  <div formGroupName="company" class="input-container">
+
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Company Name"  formControlName="name"/>
+      <label for="name" class="form__label">Company Name</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('company.name').value && addForm.get('company.name').touched">
+      Please Provide Company Name.
+    </div>
+
+  </div>
+
+  <div formGroupName="company" class="input-container">
+
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Catchphrase"  formControlName="catchPhrase"/>
+      <label for="name" class="form__label">Catchphrase</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('company.catchPhrase').value && addForm.get('company.catchPhrase').touched">
+      Please Provide Catchphrase.
+    </div>
+
+  </div>
+
+  <div formGroupName="company" class="input-container">
+
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Bs"  formControlName="bs"/>
+      <label for="name" class="form__label">Bs</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!addForm.get('company.bs').value && addForm.get('company.bs').touched">
+      Please Provide Bs.
+    </div>
+
+  </div>
+
+  <div>
+
+    <button type="submit" class="btn btn-2 btn-sep icon-cart" [disabled]="addForm.invalid">{{editMode ? 'Edit' : 'Add'}}</button>
+    <button class="btn btn-3 btn-sep icon-heart" (click)="onCancel()">Cancel</button>
+  </div>
+
+</form>

@@ -1,0 +1,206 @@
+.container {
+  margin-top: 20px;
+
+  .post {
+    &:hover {
+      transition: 0.3s;
+      transform: translate(0px, -5px);
+    }
+
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    background-color: #d7d7d7;
+    color: black;
+
+    .post-info {
+
+      p, h4 {
+        letter-spacing: 1.5px;
+      }
+    }
+
+  }
+
+}
+
+
+//my
+
+.edit-section {
+  margin-left: 225px;
+  padding: 0 19px 32px;
+
+
+  .container {
+    .heading-item {
+      display: flex;
+      justify-content: center;
+
+      .text-center {
+        margin-bottom: 3rem;
+
+        h2 {
+          font-size: 28px;
+          color: #000;
+        }
+      }
+    }
+
+    .body-item {
+      display: flex;
+      justify-content: center;
+
+      .body-section {
+        width: 100%;
+
+        .wrapper {
+          box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+
+          .row-body {
+            display: flex;
+
+            .item-right {
+
+
+              .contact-wrap {
+
+                padding: 3rem;
+
+                h3 {
+
+                }
+
+                form {
+                  .row-form {
+                    display: flex;
+                    flex-direction: column;
+
+                    .form-item {
+
+                      .form-group {
+                        margin-bottom: 1rem;
+                        display: flex;
+                        flex-direction: column;
+
+
+                        input {
+                          font-size: 16px;
+                          border: none;
+                          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                          padding: 0;
+                          height: 36px;
+                          background: #fff;
+                          color: rgba(0, 0, 0, 0.8);
+
+
+                        }
+
+                      }
+
+                      .form-group-1 {
+                        margin-bottom: 1rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        input {
+                          border: none;
+                          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                          padding: 0;
+                          height: 36px;
+                          background: #fff;
+                          color: rgba(0, 0, 0, 0.8);
+
+                        }
+
+                        textarea {
+                          border: none;
+                          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                          padding: 0;
+
+                        }
+                      }
+
+                    }
+
+                    .btn-auth {
+                      margin-top: 32px;
+                      cursor: pointer;
+                      height: 48px;
+                      font-size: 16px;
+                      width: 100%;
+                      border-radius: 8px;
+                      color: #28192d;
+                      background-color: #eea941;
+                      border: none;
+                      font-weight: 500;
+
+                      &:hover {
+                        box-shadow: 0 0 4px rgb(90 93 99 / 14%), 0 2px 14px rgb(238 169 65 / 21%);
+                      }
+                    }
+                  }
+
+                }
+              }
+
+            }
+
+            .item-left {
+              width: 100%;
+              background: #eea941;
+
+              .info-wrap {
+                color: #fff;
+                padding: 3rem;
+
+                h3 {
+
+                }
+
+                p {
+
+                }
+
+                .left-box {
+                  display: flex;
+                  align-items: center;
+                  color: rgba(255, 255, 255, 0.8);
+                  margin-bottom: 25px;
+
+                  .icon-left-box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50% !important;
+                    border: 2px solid rgba(255, 255, 255, 0.2);
+
+                    span {
+
+                    }
+                  }
+
+                  .text-left-box {
+                    padding-left: 1rem;
+
+                    p {
+                      span {
+
+                      }
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+

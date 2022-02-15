@@ -1,0 +1,33 @@
+.users-list {
+  padding: 25px;
+  margin-left: 225px;
+  padding: 0 19px 32px;
+}
+.w3-container p{
+  padding: 10px;
+}
+.w3-bar{
+  cursor: pointer;
+  transition: .3s;
+}
+.w3-bar:hover{
+
+  transform:scale(1.01);
+}
+
+.btn-auth {
+  margin-top: 32px;
+  cursor: pointer;
+  height: 48px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 8px;
+  color: #28192d;
+  background-color: #eea941;
+  border: none;
+  font-weight: 500;
+
+  &:hover {
+    box-shadow: 0 0 4px rgb(90 93 99 / 14%), 0 2px 14px rgb(238 169 65 / 21%);
+  }
+}

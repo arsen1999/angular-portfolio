@@ -1,0 +1,40 @@
+<div class="users-list">
+
+  <div class="loader" *ngIf="!users.length">
+    <div class="loader__element"></div>
+  </div>
+
+  <div class="w3-container">
+    <h2>Users List</h2>
+    <p>List of our Users and their data</p>
+    <button
+      class="btn btn-auth"
+      *ngIf="users.length"
+      style="margin-bottom: 10px"
+      routerLink="./add-new-user">
+      Creat New User
+    </button>
+
+    <ul class="w3-ul w3-card-4">
+
+      <li class="w3-bar" *ngFor="let user of users" routerLink="./{{user.id}}/user-info">
+
+        <span
+          onclick="this.parentElement.style.display='none'"
+          class="w3-bar-item w3-button w3-white w3-xlarge w3-right">
+          ×
+        </span>
+        <div><!-- [routerLink]="'/dashboard/user/'+ user.id"-->
+          <img
+            src="assets/img/avatar/flat-avatar-illustration-icon-beard-man-sunglasses-tough-guy-eps-vector-men-dressed-red-blouse-metrosexual-hair-88699969.jpg"
+            class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+          <div class="w3-bar-item">
+            <span class="w3-large">{{user.name}}</span><br>
+            <span> Phone {{user.phone}}</span>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>

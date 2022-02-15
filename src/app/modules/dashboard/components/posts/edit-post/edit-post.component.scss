@@ -1,0 +1,263 @@
+.form {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 225px;
+  padding: 0 19px 32px;
+
+  .cancel-btn {
+    &:hover {
+      background-color: #c22020;
+      color: #fff;
+    }
+
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 800;
+    border-radius: 8px;
+    width: 100px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.66);
+  }
+
+  .submit-btn {
+    &:hover {
+      background-color: #c5c5c5;
+      color: #fff;
+    }
+
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 800;
+    border-radius: 8px;
+    width: 100px;
+    margin-bottom: 20px;
+    border: none;
+
+    background-color: #d3d3d3;
+  }
+
+  .input-container {
+    margin: 10px;
+    width: 100%;
+
+    .error {
+      color: red;
+      margin-top: 5px;
+    }
+
+    .input-description {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-weight: 800;
+
+      .input-field {
+        width: 100%;
+        &:focus {
+          outline: 1px solid #259ef3;
+        }
+
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #000000;
+        margin-top: 5px;
+
+      }
+
+    }
+
+  }
+
+}
+/* General button style */
+.btn {
+  margin: 5px;
+  border: none;
+  font-family: 'Lato';
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Icon separator */
+.btn-sep {
+  padding: 15px 40px 15px 80px;
+}
+
+.btn-sep:before {
+  background: rgba(0,0,0,0.15);
+}
+.btn-2 {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.btn-2:hover {
+  background: #27ae60;
+}
+
+.btn-2:active {
+  background: #27ae60;
+  top: 2px;
+}
+
+.btn-2:before {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 120%;
+  width: 50px;
+}
+
+/* Button 3 */
+.btn-3 {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn-3:hover {
+  background: #c0392b;
+}
+
+.btn-3:active {
+  background: #c0392b;
+  top: 2px;
+}
+
+.btn-3:before {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 120%;
+  width: 60px;
+}
+.icon-cart:before {
+  content: "\f00c";
+  top: 0;
+  bottom: 0;
+}
+.icon-heart:before {
+  content: "\f00d";
+}
+
+
+//form style
+$primary: #eea941;
+$secondary: red;
+$white: black;
+$gray: #9b9b9b;
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  //width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight:700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color:#222222;
+}

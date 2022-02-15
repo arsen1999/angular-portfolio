@@ -1,0 +1,65 @@
+.dashboard-nav {
+  overflow: auto;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center 102%;
+  background-image: url(https://studio.softr.io/shapes.c1dea786245b5d441551.svg);
+  width: 225px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(40, 25, 45, 0.04);
+  padding: 0 0 16px;
+  flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+
+  .nav-header {
+    position: sticky;
+    top: 0;
+    padding: 16px 17px 16px 32px;
+    background-color: inherit;
+    margin-bottom: 16px;
+    display: flex;
+
+    img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+
+    }
+  }
+
+  .nav-body {
+    padding: 0 17px 0 32px;
+
+    .menu-items {
+      .menu-item {
+        display: flex;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        align-items: center;
+        &:hover {
+          color: #4d85d5;
+        }
+
+        i {
+          font-size: 22px;
+        }
+
+        span {
+          margin-left: 7px;
+
+        }
+      }
+    }
+
+  }
+}
+.active {
+  color: #eea941;
+}
+a{
+  text-decoration: none;
+}
+

@@ -1,0 +1,56 @@
+<form [formGroup]="editForm" (ngSubmit)="onSubmit(editForm)" class="form">
+  <div class="input-container">
+
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Name"  formControlName="name"/>
+      <label  class="form__label">Name</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!editForm.get('name').value && editForm.get('name').touched">
+      Please Provide Name.
+    </div>
+
+  </div>
+
+  <div class="input-container">
+
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Email"  formControlName="email"/>
+      <label  class="form__label">Email</label>
+    </div>
+
+    <div class="error"
+         *ngIf="editForm.get('email').invalid && editForm.get('email').value">
+      Please Provide Valid Email.
+    </div>
+
+    <div class="error"
+         *ngIf="!editForm.get('email').value && editForm.get('email').touched">
+      Please Provide Email.
+    </div>
+
+  </div>
+
+  <div class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Body"  formControlName="body"/>
+      <label  class="form__label">Body</label>
+    </div>
+
+
+    <div class="error"
+         *ngIf="!editForm.get('body').value && editForm.get('body').touched">
+      Please Provide Body.
+    </div>
+
+  </div>
+
+  <div>
+
+    <button type="submit" class="btn btn-2 btn-sep icon-cart" [disabled]="editForm.invalid">{{editingMode ? 'Edit' : 'Add'}}</button>
+    <button class="btn btn-3 btn-sep icon-heart" (click)="onCancel()">Cancel</button>
+  </div>
+
+
+</form>

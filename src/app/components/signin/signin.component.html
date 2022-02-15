@@ -1,0 +1,77 @@
+<div class="loader" *ngIf="isLoading">
+  <div class="loader__element"></div>
+</div>
+
+<div class="auth-body">
+  <div class="auth-container">
+
+    <div class="auth-header">
+      <a>
+        <img
+          src="https://softr-assets-eu-shared.s3.eu-central-1.amazonaws.com/studio/blocks/assets/softr_logo_icon_only.svg">
+      </a>
+    </div>
+    <div class="form-container">
+      <h1 class="form-title">Sign in</h1>
+      <div class="form-wrapper">
+        <button class="google-auth">
+          <img src="../../../assets/google-icon.png">
+          Sign in with Google
+        </button>
+        <div class="auth-or">or</div>
+
+        <form [formGroup]="loginForm" #authForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              placeholder="Email"
+              formControlName="email"
+            >
+            <div style="color: #ffffff" *ngIf="!loginForm.get('email').value && loginForm.get('email').touched">Please
+              Enter
+              Email
+            </div>
+            <div style="color: red"
+                 *ngIf="loginForm.get('email').value && loginForm.get('email').touched && !loginForm.get('email').valid">
+              Please
+              Enter Valid Email
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+            >
+            <div style="color: red; margin-bottom: 10px"
+                 *ngIf="!loginForm.get('password').value && loginForm.get('password').touched">Please Enter
+              Password
+            </div>
+            <div style="color: red; margin-bottom: 5px; text-align: center"
+                 *ngIf="loginForm.get('password').value && loginForm.get('password').touched && !loginForm.get('password').valid">
+              Please Enter Valid
+              Password (Min. Length 8)<br>
+              <span>Current Length {{loginForm.get('password').value.length}}</span>
+            </div>
+          </div>
+          <div style="text-align:center" class="btn-spiner">
+            <button class="btn btn-auth" [disabled]="!authForm.valid" mat-raised-button color="primary"
+                    [class.spinner]="loadingSpiner" [disabled]="loadingSpiner"> Sign In
+            </button>
+          </div>
+          <div class="forgot-password">Forgot Password?</div>
+        </form>
+
+      </div>
+      <div class="account-exist">
+        Haven’t got an account?
+        <span class="su-link" routerLink="/auth/signup">Sign Up</span>
+      </div>
+
+    </div>
+    <div class="auth-help">
+      <a><img src="https://studio.softr.io/help-center.3feef9e06d5bd7288a65.svg"></a>
+    </div>
+  </div>
+</div>
+

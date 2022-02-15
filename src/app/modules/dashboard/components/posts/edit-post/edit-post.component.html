@@ -1,0 +1,35 @@
+<form [formGroup]="editForm" (ngSubmit)="onSubmit(editForm)" class="form">
+
+  <div class="input-container">
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Title"  formControlName="title"/>
+      <label  class="form__label">Title</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!editForm.get('title').value && editForm.get('title').touched">
+      Please Provide Title.
+    </div>
+
+  </div>
+
+  <div class="input-container">
+
+    <div class="form__group field">
+      <input  class="form__field" placeholder="Body"  formControlName="body"/>
+      <label  class="form__label">Body</label>
+    </div>
+
+    <div class="error"
+         *ngIf="!editForm.get('body').value && editForm.get('body').touched">
+      Please Provide Body.
+    </div>
+
+  </div>
+
+  <div>
+    <button type="submit" class="btn btn-2 btn-sep icon-cart" [disabled]="editForm.invalid">{{editMode ? 'Edit' : 'Add'}}</button>
+    <button class="btn btn-3 btn-sep icon-heart" (click)="onCancel()">Cancel</button>
+  </div>
+
+</form>

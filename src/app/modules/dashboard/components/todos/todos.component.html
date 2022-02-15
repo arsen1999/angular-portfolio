@@ -1,0 +1,55 @@
+<div class="container-search">
+  <div class="search-box">
+    <button class="btn-search"><i class="fas fa-search"></i></button>
+    <input type="text"
+           [(ngModel)]="searchText"
+           class="input-search"
+           placeholder="Type to Search...">
+  </div>
+
+  <div class="loader" *ngIf="!todos.length">
+    <div class="loader__element"></div>
+  </div>
+</div>
+
+<div class="container-post">
+
+  <div *ngFor="let todo of todos | searchPipe : searchText" class="user">
+
+    <section class="edit-section">
+      <div class="container">
+        <div class="heading-item">
+        </div>
+        <div class="body-item">
+          <div class="body-section">
+            <div class="wrapper">
+              <div class="row-body">
+                <div class="item-left">
+                  <div class="info-wrap" style="cursor: pointer">
+                    <hr>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-heading"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Title:</span> {{todo.title}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-tv"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Completed:</span> "{{todo.completed}}"</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="loader" *ngIf="!comments.length">
+    <div class="loader__element"></div>
+  </div>
+</div>
+
+<div class="container-post">
+
+  <div *ngFor="let comment of comments" class="user">
+    <section class="edit-section">
+      <div class="container">
+        <div class="heading-item">
+        </div>
+        <div class="body-item">
+          <div class="body-section">
+            <div class="wrapper">
+              <div class="row-body">
+                <div class="item-left">
+                  <div class="info-wrap" routerLink="./{{comment.id}}/comment-info" style="cursor: pointer">
+                    <hr>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-heading"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Name:</span> {{comment.name}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-tv"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Comment:</span> "{{comment.body}}"</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>

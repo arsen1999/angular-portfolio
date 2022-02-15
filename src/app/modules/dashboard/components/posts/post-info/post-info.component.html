@@ -1,0 +1,158 @@
+<div class="container-post-info">
+
+  <div class="btn-container">
+    <button class="btn btn-2 btn-sep icon-cart" routerLink="/dashboard/posts/{{postId}}/edit-post">Edit Post</button>
+    <button class="btn btn-1 btn-sep icon-info" routerLink="/dashboard/posts/add-new-post">Create Post</button>
+    <button class="btn btn-3 btn-sep icon-heart" (click)="onDelete()">Delete User</button>
+  </div>
+
+  <div class="loader" *ngIf="!post || !user">
+    <div class="loader__element"></div>
+  </div>
+
+  <h1>Post Info</h1>
+  <div *ngIf="user && post">
+    <div class="container-post">
+      <div class="user">
+        <section class="edit-section">
+          <div class="container">
+            <div class="heading-item">
+            </div>
+            <div class="body-item">
+              <div class="body-section">
+                <div class="wrapper">
+                  <div class="row-body">
+                    <div class="item-left">
+                      <div class="info-wrap">
+                        <hr>
+                        <div class="left-box">
+                          <div class="icon-left-box">
+                            <span class="fas fa-heading"></span>
+                          </div>
+                          <div class="text-left-box">
+                            <p><span>Title:</span> {{post.title}}"</p>
+                          </div>
+                        </div>
+                        <div class="left-box">
+                          <div class="icon-left-box">
+                            <span class="fas fa-tv"></span>
+                          </div>
+                          <div class="text-left-box">
+                            <p><span>Post:</span> "{{post.body}}"</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <hr>
+    <h1>User Info</h1>
+    <section class="edit-section">
+      <div class="container">
+        <div class="heading-item">
+        </div>
+        <div class="body-item">
+          <div class="body-section">
+            <div class="wrapper">
+              <div class="row-body">
+                <div class="item-left">
+                  <div class="info-wrap">
+                    <h3>Let's get in touch</h3>
+                    <p>We're open for any suggestion or just to have a chat</p>
+                    <hr>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-user-alt"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Name:</span> {{user?.name}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-file-signature"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>UserName:</span> {{user.username}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fa fa-map-marker"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Address:</span> "{{user.address.city}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-building"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Company Name:</span> "{{user.company.name}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-city"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>City:</span> "{{user.address.city}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-road"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Street:</span> "{{user.address.street}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fas fa-file-archive"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Zipcode:</span> "{{user.address.zipcode}}"</p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fa fa-phone"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Phone:</span> <a href="tel://1234567920">"{{user.phone}}"</a></p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fa fa-paper-plane"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">"{{user.email}}"</a></p>
+                      </div>
+                    </div>
+                    <div class="left-box">
+                      <div class="icon-left-box">
+                        <span class="fa fa-globe"></span>
+                      </div>
+                      <div class="text-left-box">
+                        <p><span>Website</span> <a href="#">"{{user.website}}"</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
